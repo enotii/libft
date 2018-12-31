@@ -13,11 +13,11 @@
 NAME = libft.a
 PATH_SRC = ./srcs
 SRC = $(PATH_SRC)/*.c
-HEADER = ./srcs/*.h
+HEADER = ./includes/libft.h
 OBJ =  *.o
 all: $(NAME)
 $(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRC) -I $(HEADER)
+	gcc -Wall -Wextra -Werror -c *.c -I libft.h
 	ar rc libft.a $(OBJ)
 	ranlib libft.a
 clean:
